@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-import * as jws_decode from 'jwt-decode';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import * as jws_decode from "jwt-decode";
+import { BehaviorSubject } from "rxjs";
 
-import { TokenService } from './../token/token.service';
-import { User } from './user';
+import { TokenService } from "./../token/token.service";
+import { User } from "./user";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: "root" })
 export class UserService {
   private userSubject = new BehaviorSubject<User>(null);
   private userName: string;
@@ -33,7 +33,7 @@ export class UserService {
   logout() {
     this.tokenService.removeToken();
     this.userSubject.next(null);
-    this.userName = '';
+    this.userName = "";
     //não limpou o userName
   }
 

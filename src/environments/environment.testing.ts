@@ -6,6 +6,8 @@ export const environment = {
   production: false,
   ApiURL: "http://localhost:3000",
   serverLogURL: "http://localhost:7000",
+  token:
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImZsYXZpbyIsImVtYWlsIjoiZmxhdmlvQGFsdXJhcGljLmNvbS5iciIsImlhdCI6MTYxNzI5NzMzNSwiZXhwIjoxNjE3MzgzNzM1fQ.0El0g_HnWMIgis8iQN3bR5AZA8ujNu6oSaRoVYLZDMg",
 };
 
 /*
