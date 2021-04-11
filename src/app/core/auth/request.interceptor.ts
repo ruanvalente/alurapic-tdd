@@ -1,8 +1,13 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {
+  HttpEvent,
+  HttpHandler,
+  HttpInterceptor,
+  HttpRequest,
+} from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 
-import { TokenService } from '../token/token.service';
+import { TokenService } from "../token/token.service";
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
@@ -14,7 +19,7 @@ export class RequestInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     if (this.tokenService.hasToken()) {
       const token = this.tokenService.getToken();
-      const headers = req.headers.set('x-access-token', token);
+      const headers = req.headers.set("x-access-token", token);
       req = req.clone({ headers });
     }
 
